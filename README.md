@@ -176,8 +176,11 @@ Bearer <your_token_here>
 **⚙️ .env Format**
 
 DATABASE_URL=postgresql://postgres:yourpassword@localhost:5432/user_db
+
 SECRET_KEY=your_jwt_secret
+
 ALGORITHM=HS256
+
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 
 
