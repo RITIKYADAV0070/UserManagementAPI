@@ -196,6 +196,25 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 ![image](https://github.com/user-attachments/assets/bc53abbe-2ebc-411e-8d6e-ac71e56953f8)
 ![image](https://github.com/user-attachments/assets/9e6bc948-4239-4a0b-b2e4-83234e0a1d34)
 
+**🗒️ Explain Your Work**
+This project is a simple user management system built using FastAPI and PostgreSQL. The goal was to create a RESTful API that handles user registration, login, and profile management with proper security practices like password hashing and JWT-based authentication.
+
+The code begins with main.py, which defines the FastAPI application, sets up middleware, and declares the core routes (/register, /login, /profile/{id}). The PostgreSQL database connection is configured using SQLAlchemy in database.py, which initializes the engine and session maker. Upon starting the server, models.Base.metadata.create_all ensures all required database tables are created if they don't already exist.
+
+Each endpoint works as follows:
+
+POST /register: Takes user details, checks if the email is already registered, hashes the password using bcrypt, and saves the user to the database.
+
+POST /login: Validates user credentials, and if correct, returns a JWT token used for authenticating protected routes.
+
+GET /profile/{id} and PUT /profile/{id}: Both require a valid token. They allow users to view or update their profile data but only if their token matches the user ID being requested.
+
+JWT handling is done in auth.py, which includes token generation and decoding. The password handling uses bcrypt (via passlib) for secure storage.
+
+One challenge I faced was managing JWT authentication with proper error handling and ensuring the Authorization header was correctly used in Swagger UI. However, FastAPI's structure made it manageable and clean to implement.
+
+Overall, this project demonstrates how to build a secure, modular, and database-connected API using modern Python web development practices.
+
 
 **📣 Contact**
 For questions or feedback, feel free to reach out!
