@@ -16,21 +16,25 @@ Welcome to your 🔐 **User Authentication & Management API**, built with **Fast
 
 ---
 
-## 📂 Folder Structure
+# Project Structure
 
+The structure of the FastAPI project is as follows:
+
+```plaintext
 user_api_project/
 │
-├── app/
-│ ├── init.py
-│ ├── main.py # FastAPI entry point
-│ ├── models.py # SQLAlchemy models
-│ ├── schemas.py # Pydantic models (input/output)
-│ ├── database.py # DB engine & session
-│ ├── crud.py # DB logic
-│ ├── auth.py # JWT & password logic
+├── app/                        # Application folder
+│   ├── __init__.py             # Initialize the app package
+│   ├── main.py                 # FastAPI entry point
+│   ├── models.py               # SQLAlchemy models
+│   ├── schemas.py              # Pydantic models (input/output)
+│   ├── database.py             # DB engine & session setup
+│   ├── crud.py                 # DB logic (Create, Read, Update, Delete operations)
+│   ├── auth.py                 # JWT & password logic (authentication)
+│   └── requirements.txt        # Project dependencies
 │
-├── requirements.txt # Dependencies
-└── README.md # This file
+└── README.md                   # Documentation file
+
 
 
 ---
