@@ -197,6 +197,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 ![image](https://github.com/user-attachments/assets/9e6bc948-4239-4a0b-b2e4-83234e0a1d34)
 
 **🗒️ Explain Your Work**
+
 This project is a simple user management system built using FastAPI and PostgreSQL. The goal was to create a RESTful API that handles user registration, login, and profile management with proper security practices like password hashing and JWT-based authentication.
 
 The code begins with main.py, which defines the FastAPI application, sets up middleware, and declares the core routes (/register, /login, /profile/{id}). The PostgreSQL database connection is configured using SQLAlchemy in database.py, which initializes the engine and session maker. Upon starting the server, models.Base.metadata.create_all ensures all required database tables are created if they don't already exist.
